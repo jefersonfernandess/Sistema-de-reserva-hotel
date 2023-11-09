@@ -7,7 +7,7 @@ $(document).ready(function () {
             },
             password: {
                 required: true,
-                minleght: 3
+                minlength: 5
             }
         },
         messages: {
@@ -17,7 +17,7 @@ $(document).ready(function () {
             },
             password: {
                 required: "A senha é obrigatória!",
-                minleght: "A senha precisa ter mais de 3 caracteres."
+                minlength: "A senha precisa ter mais de 5 caracteres."
             },
         }
     })
