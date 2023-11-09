@@ -19,9 +19,12 @@
 
     .form-login {
         background-color: rgb(238, 238, 238);
-        padding: 1.2rem;
+        padding: 1.5rem;
         border: 1px solid black;
         border-radius: 1rem;
+    }
+    .form-login label {
+        font-size: 0.8rem;
     }
 
     .row {
