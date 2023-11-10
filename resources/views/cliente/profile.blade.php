@@ -17,10 +17,7 @@
                 <p>Email: {{ Auth::user()->email }}</p>
             </div>
             <div class="col-4">
-                <form action="{{ route('login.logout') }}" method="post">
-                    @csrf
-                    <button type="submit">Logout</button>
-                </form>
+                
             </div>
         </div>
 

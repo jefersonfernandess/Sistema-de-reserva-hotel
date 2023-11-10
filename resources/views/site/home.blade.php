@@ -2,12 +2,18 @@
 
 @section('title', 'Home - Hotel')
 <style>
-    .nav {
-        background: coral;
+    #navbar {
+        background-color: #243a69 !important;
+        color: #f4f4f2 !important;
     }
+    #navbar a{
+        color: #f4f4f2 ;
+    }
+    
+ 
 </style>
 @section('content')
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
             <a class="navbar-brand" href="/">Hotel-JL</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -16,9 +22,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Fazer reserva</a>
-                    </li>
+                    
                 </ul>
                 <ul class="navbar-nav">
                     @if (Auth::user())
@@ -28,8 +32,8 @@
                                 {{ Auth::user()->name }}
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="{{ route('user.profile') }}">Profile</a></li>
-                                <li><a class="dropdown-item" href="#">Suas reservas</a></li>
+                                <li><a class="dropdown-item color-black" style="color: #191013" href="{{ route('user.profile') }}">Profile</a></li>
+                                <li><a class="dropdown-item color-black" style="color: #191013" href="#">Suas reservas</a></li>
                                 <li>
                                     <form action="{{ route('login.logout') }}" method="post">
                                         @csrf
@@ -52,7 +56,7 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col"></div>
+            <div class="col"> </div>
         </div>
     </div>
 @endsection

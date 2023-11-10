@@ -3,7 +3,7 @@
 @section('title', 'Login - Hotel')
 <style>
     body {
-        background-image: url("{{ asset('img/bg.jpg') }}");
+        background-image: url("{{ asset('img/bg2.jpg') }}");
         background-size: cover;
         background-repeat: no-repeat;
     }
