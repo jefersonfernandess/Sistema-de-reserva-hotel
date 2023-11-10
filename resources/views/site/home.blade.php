@@ -12,7 +12,7 @@
             </div>
             <div class="col-4"> 
                 <p class="text-center"><a href="{{ route('login.index') }}">Login</a></p>
-                <p class="text-center"><a href="">Register</a></p>
+                <p class="text-center"><a href="{{ route('register.index') }}">Register</a></p>
             </div>
         </div>
     </div>

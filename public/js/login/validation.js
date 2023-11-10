@@ -1,6 +1,10 @@
 $(document).ready(function () {
-    $("#form-login").validate({
+    $("#form").validate({
         rules: {
+            name: {
+                required: true,
+                minlength: 3,
+            },
             email: {
                 required: true,
                 email: true
@@ -11,13 +15,17 @@ $(document).ready(function () {
             }
         },
         messages: {
+            name: {
+                required: "O nome é obrigatório!",
+                minlength: "A senha precisa ter mais de 2 caracteres."
+            },
             email: {
                 required: "O email é obrigatório!",
                 email: "O email precisa um email válido."
             },
             password: {
                 required: "A senha é obrigatória!",
-                minlength: "A senha precisa ter mais de 5 caracteres."
+                minlength: "A senha precisa ter mais de 4 caracteres."
             },
         }
     })
