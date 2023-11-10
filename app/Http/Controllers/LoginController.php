@@ -18,14 +18,18 @@ class LoginController extends Controller
             'email' => ['required', 'email'],
             'password' => ['required', 'min:5']
         ]);
-        
+
         $authenticated = Auth::attempt($validacao);
-        if(!$authenticated) 
-        {
+        if (!$authenticated) {
             return redirect()->back()->with('fail', 'Invalid email and/or password');
         }
 
         return redirect()->route('home.index');
-        
+    }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        return redirect()->route('home.index');
     }
 }

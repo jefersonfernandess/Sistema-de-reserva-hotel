@@ -17,12 +17,13 @@ class RegisterController extends Controller
     {
         $request->validate([
             'name' => 'required|min:3|max:255',
-            'email' => 'required|email',
+            'email' => 'required|email|unique:users',
             'password' => 'required|min:5|max:255'
         ], [
             'name.required' => 'Esse campo é obrigatório!',
             'name.min' => 'O nome precisa ter no mínimo de 3 caracteres.',
             'email.required' => 'Esse campo é obrigatório!',
+            'email.unique' => 'Esse email já está sendo usado.',
             'password.required' => 'Esse campo é obrigatório!',
             'password.min' => 'A senha precisa ter no mínimo de 5 caracteres.'
         ]);
