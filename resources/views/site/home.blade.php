@@ -33,7 +33,8 @@
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item color-black" style="color: #191013" href="{{ route('user.profile') }}">Profile</a></li>
-                                <li><a class="dropdown-item color-black" style="color: #191013" href="#">Suas reservas</a></li>
+                                <li><a class="dropdown-item color-black" style="color: #191013" href="#">Your reservations
+                                </a></li>
                                 <li>
                                     <form action="{{ route('login.logout') }}" method="post">
                                         @csrf
