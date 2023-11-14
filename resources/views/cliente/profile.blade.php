@@ -13,12 +13,14 @@
         </div>
         <div class="row">
             <div class="col-8">
-                <p>Nome: {{ Auth::user()->name }}</p>
-                <p>Email: {{ Auth::user()->email }}</p>
+                <p>Nome: {{ $userData->name }}</p>
+                <p>Email: {{ $userData->email }}</p>
             </div>
-            <div class="col-4">
-                <p><a href="{{ route('room.index') }}">room</a></p>
-            </div>
+            @if ($userData->UserRole->contains('Role.name', 'admin'))
+                <div class="col-4">
+                    <p><a href="{{ route('room.index') }}">room</a></p>
+                </div>
+            @endif
         </div>
 
     @endsection

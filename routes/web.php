@@ -27,6 +27,8 @@ Route::controller(SiteController::class)->group(function () {
     
     Route::controller(RoomController::class)->group(function () {
         Route::get('/view-room', 'index')->middleware('admin')->name('room.index');
+        Route::get('/create-new-room', 'createRoom')->middleware('admin')->name('room.create');
+        Route::post('/room/creating', 'storeRoom')->middleware('admin')->name('room.store');
     });
 
 });
@@ -39,6 +41,7 @@ Route::controller(UserController::class)->group(function () {
         Route::post('/login/loading', 'loginStore')->name('login.store');
         Route::post('/logout', 'logout')->name('login.logout');
     });
+
     Route::controller(RegisterController::class)->group(function () {
         Route::get('/register', 'index')->name('register.index');
         Route::post('/register/loading', 'registerStore')->name('register.store');
