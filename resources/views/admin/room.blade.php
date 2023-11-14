@@ -1,6 +1,6 @@
 @extends('master')
 
-@section('title', 'Profile - Hotel')
+@section('title', 'Admin - Hotel')
 <style>
 
 </style>
@@ -17,7 +17,7 @@
                 <p>Email: {{ Auth::user()->email }}</p>
             </div>
             <div class="col-4">
-                <p><a href="{{ route('room.index') }}">room</a></p>
+                
             </div>
         </div>
 
