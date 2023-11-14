@@ -24,7 +24,7 @@ class LoginController extends Controller
             return redirect()->back()->with('fail', 'Invalid email and/or password');
         }
 
-        return redirect()->route('home.index');
+        return redirect()->intended();
     }
 
     public function logout(Request $request)
