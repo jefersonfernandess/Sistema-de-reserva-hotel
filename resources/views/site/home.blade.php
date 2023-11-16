@@ -19,14 +19,50 @@
         margin-top: 2rem;
         height: 80%;
     }
-
-    .link-room {
+    .card_link {
         text-decoration: none;
-        color: #191013;
+        border: none;
+        color: inherit;
     }
 
-    .link-room:hover {
-        color: #191013;
+    .card_link:hover {
+        text-decoration: none;
+        border: none;
+        color: inherit;
+    }
+
+    .card {
+        width: 20rem;
+        height: 25rem;
+        border: none !important;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+        mar
+        gap: 1rem;
+    }
+
+    .card_img {
+        width: inherit;
+        height: inherit;
+        border-radius: 1rem;
+
+    }
+
+    .card_img_imagem {
+        width: 100%;
+        height: 100%;
+        border: 1px solid black;
+        border-radius: 1rem;
+    }
+
+    .card_text {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card_text_text {
+
+        margin-bottom: 0;
     }
 </style>
 @section('content')
@@ -77,80 +113,100 @@
             </div>
         </div>
     </nav>
-
-    <div class="main-content">
         <div class="container">
-            <div class="row">
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <a class="link-room" href="#">
-                            <img src=" {{ asset('img/rooms/room1.jpg') }}" class="card-img-top" alt="...">
-
-                            <div class="card-body">
-                                <p class="card-text">Quarto 1</p>
+            <div class="row ">
+                <div class="col-4">
+                    <a class="card_link" href="">
+                        <div class="card">
+                            <div class="card_img">
+                                <img class="card_img_imagem" src="{{ asset('img/rooms/room3.jpg') }}" alt="...">
                             </div>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src=" {{ asset('img/rooms/room1.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Quarto 1</p>
+                            <div class="card_text">
+                                <p class="card_text_text"><b>Quarto: N° 01</b></p>
+                                <p class="card_text_text">Quarto com vista para o mar</p>
+                                <p class="card_text_text">Quarto simples</p>
+                                <p class="card_text_text"><b>R$400,00</b> noite</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src=" {{ asset('img/rooms/room1.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Quarto 1</p>
+                <div class="col-4">
+                    <a class="card_link" href="">
+                        <div class="card">
+                            <div class="card_img">
+                                <img class="card_img_imagem" src="{{ asset('img/rooms/room3.jpg') }}" alt="...">
+                            </div>
+                            <div class="card_text">
+                                <p class="card_text_text"><b>Quarto: N° 01</b></p>
+                                <p class="card_text_text">Quarto com vista para o mar</p>
+                                <p class="card_text_text">Quarto simples</p>
+                                <p class="card_text_text"><b>R$400,00</b> noite</p>
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src=" {{ asset('img/rooms/room1.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Quarto 1</p>
+                <div class="col-4">
+                    <a class="card_link" href="">
+                        <div class="card">
+                            <div class="card_img">
+                                <img class="card_img_imagem" src="{{ asset('img/rooms/room3.jpg') }}" alt="...">
+                            </div>
+                            <div class="card_text">
+                                <p class="card_text_text"><b>Quarto: N° 01</b></p>
+                                <p class="card_text_text">Quarto com vista para o mar</p>
+                                <p class="card_text_text">Quarto simples</p>
+                                <p class="card_text_text"><b>R$400,00</b> noite</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src=" {{ asset('img/rooms/room1.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Quarto 1</p>
+                    </a>
+                </div>      
+                <div class="col-4">
+                    <a class="card_link" href="">
+                        <div class="card">
+                            <div class="card_img">
+                                <img class="card_img_imagem" src="{{ asset('img/rooms/room3.jpg') }}" alt="...">
+                            </div>
+                            <div class="card_text">
+                                <p class="card_text_text"><b>Quarto: N° 01</b></p>
+                                <p class="card_text_text">Quarto com vista para o mar</p>
+                                <p class="card_text_text">Quarto simples</p>
+                                <p class="card_text_text"><b>R$400,00</b> noite</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src=" {{ asset('img/rooms/room1.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Quarto 1</p>
+                    </a>
+                </div>      
+                <div class="col-4">
+                    <a class="card_link" href="">
+                        <div class="card">
+                            <div class="card_img">
+                                <img class="card_img_imagem" src="{{ asset('img/rooms/room3.jpg') }}" alt="...">
+                            </div>
+                            <div class="card_text">
+                                <p class="card_text_text"><b>Quarto: N° 01</b></p>
+                                <p class="card_text_text">Quarto com vista para o mar</p>
+                                <p class="card_text_text">Quarto simples</p>
+                                <p class="card_text_text"><b>R$400,00</b> noite</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src=" {{ asset('img/rooms/room1.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Quarto 1</p>
+                    </a>
+                </div>      
+                <div class="col-4">
+                    <a class="card_link" href="">
+                        <div class="card">
+                            <div class="card_img">
+                                <img class="card_img_imagem" src="{{ asset('img/rooms/room3.jpg') }}" alt="...">
+                            </div>
+                            <div class="card_text">
+                                <p class="card_text_text"><b>Quarto: N° 01</b></p>
+                                <p class="card_text_text">Quarto com vista para o mar</p>
+                                <p class="card_text_text">Quarto simples</p>
+                                <p class="card_text_text"><b>R$400,00</b> noite</p>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-3">
-                    <div class="card" style="width: 18rem;">
-                        <img src=" {{ asset('img/rooms/room1.jpg') }}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <p class="card-text">Quarto 1</p>
-                        </div>
-                    </div>
-                </div>
+                    </a>
+                </div>                 
             </div>
         </div>
-    </div>
 
     <footer class="text-center text-white" style="background-color: #f1f1f1;">
         <div class="text-center text-dark p-3" style="background-color: rgba(0, 0, 0, 0.2);">
