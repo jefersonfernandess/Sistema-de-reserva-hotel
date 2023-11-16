@@ -48,7 +48,7 @@
 </style>
 @section('content')
     <div class="container content">
-        <form id="form" class="form-login" action="{{ route('room.store') }}" method="post">
+        <form id="form" class="form-login" action="{{ route('room.store') }}" enctype="multipart/form-data" method="post">
             @csrf
             <div class="row">
                 <div class="col d-flex justify-content-center">
@@ -73,6 +73,16 @@
             <div class="row">
                 <div class="col d-flex flex-column justify-content-center">
                     <input type="text" name="status" id="status" placeholder="Status" required> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex flex-column justify-content-center">
+                    <input type="price" name="price" id="price" placeholder="Price" required> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex flex-column justify-content-center">
+                    <input type="file" name="img" id="img" required> 
                 </div>
             </div>
             <div class="row">

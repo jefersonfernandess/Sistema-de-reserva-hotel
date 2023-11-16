@@ -15,6 +15,11 @@ class Room extends Model
         'room_number',
         'room_description',
         'room_type',
-        'status'
+        'status',
+        'price'
     ];
+
+    public function RoomImage() {
+        return $this->hasMany(RoomImage::class, 'room_id', 'id');
+    }
 }

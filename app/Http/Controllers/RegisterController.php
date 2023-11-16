@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Role;
 use App\Models\User;
+use App\Models\UserRole;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -36,7 +38,12 @@ class RegisterController extends Controller
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => $request['password'] = Hash::make($request->password)
+            'password' => $request['password'] = Hash::make($request->password)           
+        ]);
+
+        UserRole::create([
+            'user_id' => $user->id,
+            'role_id' => 2
         ]);
 
         Auth::login($user);
