@@ -124,7 +124,7 @@
             @foreach ($rooms as $room)
                 @foreach ($room->RoomImage as $image)
                     <div class="col-4">
-                        <a class="card_link" href="{{ route('home.room', $room->id) }}">
+                        <a class="card_link" href="{{ route('home.room', $room->id) }}" target="_blank">
                             <div class="card">
                                 <div class="card_img">
                                     <img class="card_img_imagem" src="{{ asset('storage/' . $image->image_path) }}"
