@@ -20,6 +20,7 @@ class RoomController extends Controller
     public function storeRoom(Request $request) {
         
         $validate = $request->validate([
+            'room_title' => 'required',
             'room_number' => 'required',
             'room_description' => 'required',
             'room_type' => 'required',
@@ -33,6 +34,7 @@ class RoomController extends Controller
         }
         
         $room = Room::create([
+            'room_title' => $request->room_title,
             'room_number' => $request->room_number,
             'room_description' => $request->room_description,
             'room_type' => $request->room_type,
@@ -40,12 +42,12 @@ class RoomController extends Controller
             'status' => $request->status
         ]);
         
-        $imagePath = $request->file('img')->store('rooms');
+        $imagePath = $request->file('img')->store('roomsImage');
         RoomImage::create([
             'room_id' => $room->id,
             'image_path' => $imagePath
         ]);
 
-        return redirect()->route('room.index');
+        return redirect()->route('home.index');
     }
 }

@@ -14,4 +14,9 @@ class HomeController extends Controller
         $rooms = Room::with('RoomImage')->get();
         return view('site.home', compact('userData', 'rooms'));
     }
+
+    public function viewRoom($id) {
+        $room = Room::with('RoomImage')->find($id);
+        return view('site.room.room', compact('room'));    
+    }
 }

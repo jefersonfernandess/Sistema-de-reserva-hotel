@@ -23,6 +23,7 @@ Route::controller(SiteController::class)->group(function () {
 
     Route::controller(HomeController::class)->group(function () {
         Route::get('/', 'index')->name('home.index');
+        Route::get('/room/{id}', 'viewRoom')->name('home.room');
     });
     
     Route::controller(RoomController::class)->group(function () {

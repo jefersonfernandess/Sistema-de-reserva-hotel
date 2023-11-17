@@ -57,6 +57,11 @@
             </div>
             <div class="row">
                 <div class="col d-flex flex-column justify-content-center">
+                    <input type="text" name="room_title" id="room_title" placeholder="Room title" required>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex flex-column justify-content-center">
                     <input type="text" name="room_number" id="room_number" placeholder="Room number" required>
                 </div>
             </div>
