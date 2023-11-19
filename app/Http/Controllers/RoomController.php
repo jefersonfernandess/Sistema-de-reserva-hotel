@@ -42,10 +42,11 @@ class RoomController extends Controller
             'status' => $request->status
         ]);
         
-        $imagePath = $request->file('img')->store('roomsImage');
+        $imagePath = $request->file('img')->store('public/roomImage');
+
         RoomImage::create([
             'room_id' => $room->id,
-            'image_path' => $imagePath
+            'image_path' => 'roomImage/' . basename($imagePath)
         ]);
 
         return redirect()->route('home.index');
