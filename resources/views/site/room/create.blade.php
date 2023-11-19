@@ -45,6 +45,48 @@
     .errorMessage {
         color: red;
     }
+
+
+    @media only screen and (min-width: 700px) {
+        .content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            margin: 10 auto;
+            height: 100%;
+        }
+
+        .form-login {
+            background-color: rgb(238, 238, 238);
+            height: 35rem;
+            padding: 1.5rem;
+            border: 1px solid black;
+            border-radius: 1rem;
+        }
+    
+        .form-login label {
+            font-size: 1rem;
+        }
+    
+        .row {
+            margin-bottom: 1rem;
+        }
+    
+        .form-login input {
+            font-size: 1.1rem;
+            padding: 0.2rem;
+        }
+    
+        .form-login button {
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    
+        .errorMessage {
+            color: red;
+        }
+      }
 </style>
 @section('content')
     <div class="container content">
